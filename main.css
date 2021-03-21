@@ -1,0 +1,125 @@
+body{
+    padding:0px;
+    margin:0px;
+}
+#main{
+    background-color:aquamarine;
+    overflow:hidden;
+    padding:0px;
+
+}
+.ma{
+    background-image:url("https://c8.alamy.com/comp/PH8RMP/vector-flat-illustration-bank-building-on-a-white-background-bank-financing-money-exchange-financial-services-atm-giving-out-money-PH8RMP.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+#main a{
+    margin-top:0px;
+    color:burlywood;
+    vertical-align:middle;
+    background-color:rgb(207, 141, 43);
+    padding: 10px;
+    text-decoration:none;
+    display:inline-block;
+    font-size:20px;
+    margin-right:230px;
+
+}
+#main a:hover{
+    background-color:darkslateblue;
+    color:bisque;
+}
+#main1{
+    color:darkgreen;
+    background-color: lightblue;
+    padding:0px;
+
+
+
+}
+#home h1,h2{
+    color:darksalmon;
+    font-size:26px;
+    margin:0px;
+}
+#home{
+    color:forestgreen;
+    list-style-type: none;
+    letter-spacing: normal;
+    text-align:center;
+    padding:10px;
+
+    font-size:18px;
+
+}
+li{
+    padding:10px;
+    list-style-type:none;
+}
+
+span{
+    background-color:blueviolet;
+}
+#one{
+    padding:10px;
+    width:40%;
+    text-align:center;
+    margin:auto;
+    background-color:coral;
+    border:2px solid red;
+    border-radius:25px;
+
+}
+.button{
+    background-color:darkgoldenrod;
+    text-align:center;
+    text-decoration:none;
+    font-size:18px;
+    padding:4px;
+}
+.button1{
+    background-color:darkolivegreen;
+    text-align:center;
+    text-decoration:none;
+    font-size:18px;
+    padding:4px;
+}
+#trans{
+    padding:10px;
+    width:50%;
+    text-align:center;
+    margin:auto;
+    background-color:darkslategray;
+    border:2px solid red;
+    border-radius:25px ;
+
+}
+#tab{
+    text-decoration: none;
+    color:darkblue;
+    border:2px solid green;
+    border-collapse:collapse;
+    width:200px;
+    padding:10px;
+
+}
+#nith{
+    border-radius:25px;
+    width:60%;
+    border-collapse:collapse;
+    padding:10px;
+    color:darkblue;
+    border:2px solid green;
+
+
+}
+#display{
+    color:saddlebrown;
+    text-decoration: none;
+    border:2px solid blue;
+    border-radius:25px;
+    padding:10px;
+    margin-right:200px;
+    border-collapse:collapse;
+    vertical-align:middle;
+}

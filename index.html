@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            VMG BANK
+        </title>
+       <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    </head>
+    <body>
+        <div id="main1">
+<center>
+                <p>VMG BANK</p>
+                <p>VELUR,NAMAKKAL
+                </p>
+                <p>8903985727,9080820969</p>
+            </center>
+        </div>
+        <div id="main">
+            <a href="#home">HOME</a>
+            <a href="#table">CUSTOMER'S DETAILS</a>
+            <a href="#one">SEARCH </a>
+            <a href="#trans">TRANSACTION</a>
+        </div>
+<div class="ma">
+        <div id="home">
+<p><center><marquee><h1>WELCOME TO VMG BANK</h1></marquee></center></p>
+<p><left>OUR FOUNDATION</left></p>
+<p style="margin-right:10px;">The Karur Vysya Bank Limited, popularly known as KVB was set up on 25 July 1917 by M. A. Venkatarama Chettiar and Athi Krishna Chettiar, to capitalise on the previously unexploited market of traders and agriculturists in and around Karur, a town in Tamil Nadu.
+
+   <br> Though the bank started with a seed capital of ₹1 lakh, as with most banks, the seed capital has grown, as have the services sold. The bank is managed and guided by the Board of Directors drawn from different fields.
+
+   <br> Realising that there is more money elsewhere, the bank expanded out of Karur and established approximately 668 branches in other States and Union Territories in order to gain a pan-India presence.
+
+    </p>
+
+<p><h2>THE MAIN ADVANTAGES OF OUR BANK ARE:</h2></p>
+<ul><li>We will provide 24/7 Customer care service with free of cost</li>
+<li>We provide High tech safety to your account</li>
+<li>
+    We provide internet banking to all account where the each and every transaction is safe and secure
+</li></ul>
+         <div id="display" border="1">
+         <p>HERE ARE THE LIST OF CUSTOMERS WHO ALL ARE HAVING ACCOUNT IN OUR BANK FOR LAST TEN YEARS  </p>
+                <table >
+                <tr>
+                    <th>ACCOUNT NUMBER</th>
+                    <th>CUSTOMER NAME</th>
+                    <th>EMAILID</th>
+                    <th>BALANCE </th>
+                </tr>
+    {% for row in data%}
+
+            <tr>
+            <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+            </tr>
+            {% endfor %}
+</table>
+        </div>
+
+
+
+
+        <div id="one">
+            <p>You can search the account by entering either name or accountnumber:</p>
+<form method="post" action="http://127.0.0.1:5000/result">
+    number<input type="number" name="number" >
+    <br><br><br><input type="submit"  class="button"value="SEARCH">
+<br>
+</form>
+        <table border="1">
+
+
+    {% for useq in data1%}
+        <tr>
+                    <th>ACCOUNT NUMBER</th>
+                    <th>CUSTOMER NAME</th>
+                    <th>EMAILID</th>
+                    <th>BALANCE </th>
+                </tr>
+            <tr>
+            <td>{{ useq[0] }}</td>
+                <td>{{ useq[1] }}</td>
+                <td>{{ useq[2] }}</td>
+                <td>{{ useq[3] }}</td>
+            </tr>
+            {% endfor %}
+</table>
+        </div>
+
+
+        </div><br><br><br>
+        <div id="trans" style="border-radius:25px">
+            <p>TRANSACTION</p>
+            <p>YOU CAN PROCEED YOUR TRANSACTION USING ACCOUNT NUMBER</p>
+            <form action= 'http://127.0.0.1:5000/transfer' method="POST">
+                <center><label for "number1">ENTER THE YOUR ACCOUNT NUMBER</label><br><br>
+                <input type="number" name="number1" placeholder='account number'></center><br><br>
+                <center><label for "name">ENTER YOUR THE  NAME</label><br><br>
+                    <input type="text" name="name" placeholder='account holder name'></center>
+                <center><label for "balance">ENTER A VALID AMOUNT</label><br><br>
+                    <input type="number" name="balance" placeholder="enter a valid amount"></center><br><br>
+                    <center><label for "number2">ENTER THE RECEIVER'S ACCOUNT NUMBER</label><br><br>
+                        <input type="number" name="number2" placeholder='account number'></center><br><br>
+                        <center><label for "name">ENTER THR RECEIVER'S THE  NAME</label><br><br>
+                            <input type="text" name="name" placeholder='account holder name'></center>
+                    <br><br><br><input type="submit"  class="button1"value="CONFIRM YOUR TRANSACTION">
+
+                </form>
+                        </div>
+
+    </div>
+    </body>
+</html>
